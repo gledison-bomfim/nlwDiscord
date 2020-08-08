@@ -30,20 +30,30 @@
 
     }
 
+    html,
+    body{
+        height: 100vh;
+    }
     body{
         background-color: var(--color-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    */
+    
+
+    body, input, 
+    button,
+    textarea{
+        /*Font 500 1.6rem poppins; */
+       font-weight: 500;
+       font-family: Poppins;
+       font-size: 1.6rem;
+       color: var(--color-text-base);
+    }
 
     #container{
-        /*box model*/
-        border: 1px solid red;
-        padding: 40px ;
-        /* Mesma coisa de cima
-        padding-top: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 100px;*/
-        margin: 60px;
         width: 90vw;
+        max-width: 700px;
     }
+    
