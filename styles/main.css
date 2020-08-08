@@ -5,8 +5,8 @@
         --color-primary: #8257E5;
         --color-primary-dark: #774DD6;
         --color-primary-darker: #6842C2;
-        --color-secundary: #04D361;
-        --color-secundary-dark: #04BF58;
+        --color-secondary: #04D361;
+        --color-secondary-dark: #04BF58;
         --color-title-in-primary: #FFFFFF;
         --color-text-in-primary: #D4C2FF;
         --color-text-title: #32264D;
@@ -30,20 +30,35 @@
 
     }
 
+    html,
+    body{
+        height: 100vh;
+    }
     body{
         background-color: var(--color-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    */
+    
+
+    body, input, 
+    button,
+    textarea{
+        /*Font 500 1.6rem poppins; */
+       font-weight: 500;
+       font-family: Poppins;
+       font-size: 1.6rem;
+       color: var(--color-text-base);
+    }
 
     #container{
-        /*box model*/
-        border: 1px solid red;
-        padding: 40px ;
-        /* Mesma coisa de cima
-        padding-top: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 100px;*/
-        margin: 60px;
         width: 90vw;
+        max-width: 700px;
+    }
+    
+    @media(min-width: 700px){
+        :root{
+            font-size: 62.5%;
+        }
     }
