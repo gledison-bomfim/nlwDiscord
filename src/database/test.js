@@ -2,7 +2,7 @@ const Database = require('./db.js')
 const createProffy = require('./createProffy')
 
 
-    Database.then((db) =>{
+    Database.then(async(db) =>{
 
                 proffyValue = {
                 name: "Glédison Bomfim",
@@ -16,7 +16,7 @@ const createProffy = require('./createProffy')
                 cost:"80"
             }
 
-            classScheduleValue = [
+            classScheduleValues = [
                 {
                     weekday:1,
                     time_from:720,
@@ -29,8 +29,11 @@ const createProffy = require('./createProffy')
                 }
             ]
 
-            createProffy(db, {proffyValue, classValue, classScheduleValue})
+            //await createProffy(db, {proffyValue, classValue, classScheduleValues})
 
+            const selectedProffys = await db.all("SELECT * FROM proffys")
+            console.log(selectedProffys)
 
+            
 
     })
